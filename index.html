@@ -1,0 +1,199 @@
+<!DOCTYPE html><html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>مركز Brandink</title>
+  <style>
+    body {
+        <div class="flex justify-center mt-10">
+  <img src="logo.png" alt="Brandink Logo" class="h-28 w-auto">
+</div>
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+      background-color: #f9f9f9;
+      overflow-x: hidden;
+    }
+    .sidebar {
+      width: 250px;
+      background-color: #6c3483;
+      color: white;
+      height: 100vh;
+      position: fixed;
+      right: -250px;
+      top: 0;
+      transition: right 0.3s ease;
+      padding: 70px 20px 20px;
+      box-sizing: border-box;
+      z-index: 1000;
+    }
+    .sidebar.open {
+      right: 0;
+    }
+    .sidebar h2 {
+      text-align: center;
+      margin-bottom: 30px;
+      animation: fadeInDown 1s ease forwards;
+    }
+    .sidebar a {
+      display: block;
+      color: white;
+      text-decoration: none;
+      margin: 10px 0;
+      font-weight: bold;
+      transition: 0.3s;
+      opacity: 0;
+      transform: translateX(20px);
+      animation: slideInRight 0.5s ease forwards;
+    }
+    .sidebar a:nth-child(2) { animation-delay: 0.2s; }
+    .sidebar a:nth-child(3) { animation-delay: 0.4s; }
+    .sidebar a:nth-child(4) { animation-delay: 0.6s; }
+    .sidebar a:nth-child(5) { animation-delay: 0.8s; }.sidebar a:hover {
+  text-decoration: underline;
+}
+.menu-btn {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: #6c3483;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  font-size: 16px;
+  z-index: 1001;
+  transition: background-color 0.3s;
+}
+.menu-btn:hover {
+  background-color: #8e44ad;
+}
+main {
+  margin: 0;
+  padding: 30px;
+  transition: margin-right 0.3s ease;
+  animation: fadeIn 1s ease;
+}
+header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+header img {
+  height: 120px;
+  animation: zoomIn 1s ease;
+}
+h1 {
+  color: #6c3483;
+  animation: fadeInUp 1s ease;
+}
+.section-title {
+  font-size: 1.5em;
+  color: #6c3483;
+  border-bottom: 2px solid #6c3483;
+  margin-bottom: 10px;
+  animation: fadeInLeft 1s ease;
+}
+ul {
+  list-style-type: square;
+  padding-right: 20px;
+}
+li {
+  animation: fadeInUp 0.5s ease;
+}
+.footer {
+  background-color: #eee;
+  text-align: center;
+  padding: 15px;
+  margin-top: 40px;
+  color: #444;
+  animation: fadeIn 2s ease;
+}
+section {
+  display: none;
+}
+section.active {
+  display: block;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; } to { opacity: 1; }
+}
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-20px); } to { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeInLeft {
+  from { opacity: 0; transform: translateX(-20px); } to { opacity: 1; transform: translateX(0); }
+}
+@keyframes slideInRight {
+  from { opacity: 0; transform: translateX(20px); } to { opacity: 1; transform: translateX(0); }
+}
+@keyframes zoomIn {
+  from { opacity: 0; transform: scale(0.8); } to { opacity: 1; transform: scale(1); }
+}
+
+  </style>
+</head>
+<body>
+  <button class="menu-btn" onclick="toggleSidebar()">☰ القائمة</button>
+  <div class="sidebar" id="sidebar">
+    <h2>Brandink</h2>
+    <a href="#" onclick="showSection('intro')">الرئيسية</a>
+    <a href="#" onclick="showSection('writing')">قسم الكتابة</a>
+    <a href="#" onclick="showSection('design')">قسم التصميم</a>
+    <a href="#" onclick="showSection('contact')">التواصل</a>
+  </div>  <main id="main">
+    <header>
+      <img src="/mnt/data/file-4sSQMSWP31U4ynPjDyWg6E" alt="شعار Brandink">
+      <h1>Brandink CENTER</h1>
+    </header><section id="intro" class="active">
+  <div class="section-title">عن المركز</div>
+  <p>يسعدنا أن نخبركم ببدء مركزنا <strong>Brandink CENTER</strong>، والهدف من المركز هو أننا نساعد كل شخص أو مشروع يبدأ بداية احترافية، سواء من خلال كتابة المحتوى أو تصميم الهوية البصرية، وكل ذلك بأعلى جودة وأقل تكلفة ممكنة.</p>
+</section>
+
+<section id="writing">
+  <div class="section-title">قسم الكتابة</div>
+  <ul>
+    <li><strong>كتابة الملفات الخاصة بالمشروعات:</strong> إعداد ملفات احترافية لمشاريع دراسية أو تجارية تحتوي على وصف، خطة عمل، ومحتوى مرتب.</li>
+    <li><strong>كتابة ملفات Word منظمة:</strong> تنسيق الملفات باستخدام العناوين والفقرات والجداول لجعلها واضحة وسهلة القراءة.</li>
+    <li><strong>تحويل لملف PDF:</strong> تجهيز الملفات النهائية للطباعة أو النشر بصيغة لا يمكن التعديل عليها.</li>
+    <li><strong>كتابة محتوى تسويقي:</strong> صياغة نصوص إعلانية مخصصة للبوستات أو المواقع أو الحملات التسويقية تجذب الانتباه وتحفز العميل.</li>
+  </ul>
+</section>
+
+<section id="design">
+  <div class="section-title">قسم التصميم</div>
+  <ul>
+    <li><strong>تصميم لوجو:</strong> ابتكار شعار فريد يعبر عن هوية المشروع ويُستخدم في كل المنصات.</li>
+    <li><strong>تصميم بوستات سوشيال ميديا:</strong> تصميم صور جذابة ومتناسقة للنشر على الفيسبوك، إنستجرام، وغيرها.</li>
+    <li><strong>تصميم بنرات:</strong> عمل لافتات إعلانية رقمية أو للطباعة بمقاسات مختلفة.</li>
+    <li><strong>تصميم هوية بصرية:</strong> إنشاء مجموعة متكاملة من التصميمات تتضمن الشعار، ألوان العلامة، بطاقات العمل، وأوراق رسمية.</li>
+    <li><strong>تصميم منيوهات:</strong> ترتيب أصناف الطعام/الشراب بتصميم أنيق وسهل الفهم.</li>
+    <li><strong>تصميم كروت شخصية:</strong> تصميم كارت يعبر عن الشخص أو المؤسسة بطريقة احترافية.</li>
+  </ul>
+</section>
+
+<section id="contact">
+  <div class="section-title">التواصل</div>
+  <p><strong>إدارة:</strong> أبانوب سامح</p>
+  <p><strong>للتواصل:</strong> 01230146266</p>
+</section>
+
+<div class="footer">© 2025 Brandink CENTER</div>
+
+  </main>  <script>
+    function toggleSidebar() {
+      const sidebar = document.getElementById('sidebar');
+      sidebar.classList.toggle('open');
+    }
+
+    function showSection(id) {
+      document.querySelectorAll('section').forEach(section => {
+        section.classList.remove('active');
+      });
+      document.getElementById(id).classList.add('active');
+      document.getElementById('sidebar').classList.remove('open');
+    }
+  </script></body>
+</html>
